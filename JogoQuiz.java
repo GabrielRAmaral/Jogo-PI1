@@ -16,27 +16,29 @@ import java.util.List;
 
 public class JogoQuiz {
 
-    static int qtRespostasCorretas = 0, qtRespostasINcorretas = 0;
+    static int qtRespostasCorretas, qtRespostasINcorretas;
 
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
         int opcao = 1;
 
-        while (opcao != 4) {
+        while (opcao != 4) {           
             imprimir("+_____________+");
             imprimir(">1- INSTRUÇÕES<");
             imprimir(">2- JOGAR     <");
             imprimir(">3- CRÉDITOS  <");
             imprimir(">4- SAIR      <");
             imprimir("+_____________+");
-            imprimir("Escolha sua opção: ");
+            imprimir("Escolha sua opção:");
             opcao = input.nextInt();
             switch (opcao) {
                 case 1:
                     instrucao();
                     break;
-                case 2:
+                case 2:  
+                    qtRespostasCorretas = 0;
+                    qtRespostasINcorretas = 0;
                     jogar();
                     break;
                 case 3:
@@ -51,16 +53,17 @@ public class JogoQuiz {
             }
         }
     }
-
+    
     public static void imprimir(String msg){
         System.out.println(msg);
     }
     
     public static void instrucao(){
-        imprimir("Aperte 2 para jogar e então selecione a alternativa escolhida digitando a letra correspondente.");
-        imprimir("Aperte 3 para visualizar os Créditos.");
-        imprimir("Aperte 4 para sair do jogo.");
-        imprimir("Bom jogo!!");
+        imprimir("*Este é um QUIZ de 10 perguntas com o tema copa do mundo.*");
+        imprimir("*Aperte 2 para jogar e então selecione a alternativa escolhida digitando a letra correspondente.*");
+        imprimir("*Aperte 3 para visualizar os Créditos.*");
+        imprimir("*Aperte 4 para sair do jogo.*");
+        imprimir("*Bom jogo!!*");
     }
 
     public static void jogar() {
@@ -118,8 +121,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "B":
@@ -130,8 +131,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "C":
@@ -142,8 +141,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "D":
@@ -154,8 +151,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "E":
@@ -166,8 +161,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 default:
@@ -207,8 +200,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "B":
@@ -219,8 +210,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "C":
@@ -231,8 +220,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "D":
@@ -243,8 +230,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "E":
@@ -255,8 +240,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 default:
@@ -296,8 +279,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "B":
@@ -308,8 +289,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "C":
@@ -320,8 +299,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "D":
@@ -332,8 +309,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "E":
@@ -344,8 +319,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 default:
@@ -385,8 +358,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "B":
@@ -397,8 +368,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "C":
@@ -409,8 +378,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "D":
@@ -421,8 +388,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "E":
@@ -433,8 +398,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 default:
@@ -474,8 +437,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "B":
@@ -486,8 +447,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "C":
@@ -498,8 +457,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "D":
@@ -510,8 +467,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "E":
@@ -522,8 +477,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 default:
@@ -563,8 +516,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "B":
@@ -575,8 +526,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "C":
@@ -587,8 +536,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "D":
@@ -599,8 +546,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "E":
@@ -611,8 +556,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 default:
@@ -652,8 +595,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "B":
@@ -664,8 +605,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "C":
@@ -676,8 +615,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "D":
@@ -688,8 +625,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "E":
@@ -700,8 +635,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 default:
@@ -741,8 +674,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "B":
@@ -753,8 +684,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "C":
@@ -765,8 +694,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "D":
@@ -777,8 +704,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "E":
@@ -789,8 +714,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 default:
@@ -830,8 +753,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "B":
@@ -842,8 +763,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "C":
@@ -854,8 +773,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "D":
@@ -866,8 +783,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 case "E":
@@ -878,8 +793,6 @@ public class JogoQuiz {
                         imprimir("Resposta incorreta!");
                         qtRespostasINcorretas++;
                     }
-                    imprimir("Quantidade de respostas corretas: "+qtRespostasCorretas);
-                    imprimir("Quantidade de respostas incorretas: "+qtRespostasINcorretas);
                     acertou = false;
                     break;
                 default:
